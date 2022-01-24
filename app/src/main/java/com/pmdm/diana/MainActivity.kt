@@ -85,18 +85,25 @@ class MainActivity : AppCompatActivity()
 
                 mp.setOnCompletionListener {
 
+                    // definimos las características comunes del cuadro de diálogo
                     var madb = MaterialAlertDialogBuilder(this@MainActivity)
                                     .setTitle(R.string.app_name)
-                                    .setPositiveButton(R.string.btn_continuar) { i, w ->
-                                        numero = Random.nextInt(1,100)
-                                        /*actualizarMarcador()*/
-                                    }
 
-                    if (valor==numero)
-                        madb.setMessage(getString(R.string.msg_info_acierto,  puntos))
-                            .setNegativeButton(R.string.btn_terminar) { i, w -> resetGame() }
-                    else
+                    // comprobamos el acierto
+                    if (valor!=numero) {
                         madb.setMessage(getString(R.string.msg_info_tirada, valor, puntos))
+
+                        // comprobamos si el juego ha terminado en cuyo caso reseteamos la
+                        // partida; en otro caso, continuamos
+                        if (tiradas==0)
+                            madb.setNeutralButton(R.string.btn_terminar) { i,w -> resetGame() }
+                        else
+                            madb.setPositiveButton(R.string.btn_continuar) { i, w -> numero = randomNumber() }
+
+                    } else
+                        madb.setMessage(getString(R.string.msg_info_acierto,  puntos))
+                            .setPositiveButton(R.string.btn_continuar) { i, w -> numero = randomNumber() }
+                            .setNegativeButton(R.string.btn_terminar) { i, w -> resetGame() }
                     //
                     madb.show()
                 }
@@ -117,6 +124,12 @@ class MainActivity : AppCompatActivity()
     }
 
     /**
+     * Genera un nuevo número aleatorio
+     * @return Int
+     */
+    private fun randomNumber(): Int = Random.nextInt(1,100)
+
+    /**
      * Resetea las condiciones del juego
      */
     private fun resetGame()
@@ -131,7 +144,7 @@ class MainActivity : AppCompatActivity()
             puntuacion = 0
 
             // elegimos valor aleatorio
-            numero = Random.nextInt(1,100)
+            numero = randomNumber()
 
             // actualizamos los marcadores
             /*actualizarMarcador()*/
