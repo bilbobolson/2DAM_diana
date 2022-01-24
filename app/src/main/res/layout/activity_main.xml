@@ -55,6 +55,7 @@
         android:layout_marginTop="18dp"
         android:valueFrom="1"
         android:valueTo="100"
+        app:floatingLabel="false"
         app:layout_constraintEnd_toStartOf="@+id/juegoBarraMax"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/juegoBarraMin"

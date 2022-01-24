@@ -1,6 +1,11 @@
 package com.pmdm.diana
 
-import android.content.Intent
+/**
+ * Antonio José Sánchez Bujaldón
+ * Programación de Aplicaciones Multimedia y de Dispositivos Móviles
+ * curso 2021|22
+ */
+
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -13,6 +18,9 @@ class InfoActivity : AppCompatActivity()
     private lateinit var binding: ActivityInfoBinding
     private lateinit var sp: SharedPreferences
 
+    /**
+     * @param savedInstanceState: Bundle?
+     */
     override fun onCreate(savedInstanceState: Bundle?)
     {
         super.onCreate(savedInstanceState)

@@ -1,7 +1,9 @@
 package com.pmdm.diana
 
 /**
- *
+ * Antonio José Sánchez Bujaldón
+ * Programación de Aplicaciones Multimedia y de Dispositivos Móviles
+ * curso 2021|22
  */
 
 import android.content.Intent
@@ -102,6 +104,8 @@ class MainActivity : AppCompatActivity()
         }
     }
 
+    /**
+     */
     override fun onStart()
     {
         super.onStart()
@@ -112,6 +116,9 @@ class MainActivity : AppCompatActivity()
         umbral = sp.getInt("umbral", 10)
     }
 
+    /**
+     * Resetea las condiciones del juego
+     */
     private fun resetGame()
     {
         binding.apply {
@@ -128,8 +135,21 @@ class MainActivity : AppCompatActivity()
 
             // actualizamos los marcadores
             /*actualizarMarcador()*/
-
         }
+    }
+
+    /**
+     * Comprueba si el valor dado está dentro del umbral
+     * @param valor: Int
+     * @return
+     */
+    private fun dentroDeUmbral(valor: Int):Boolean
+    {
+        // calculamos el valor absoluto
+        val absoluto = abs(numero-valor)
+
+        // comprobamos si estamos dentro del rango [1,umbral]
+        return ((absoluto >= 1) && (absoluto <= umbral))
     }
 
     /*private fun actualizarMarcador()
@@ -141,15 +161,6 @@ class MainActivity : AppCompatActivity()
             juegoMensaje.text  = getString(R.string.msg_juego, numero)
         }
     }*/
-
-    private fun dentroDeUmbral(valor: Int):Boolean
-    {
-        // calculamos el valor absoluto
-        val absoluto = abs(numero-valor)
-
-        // comprobamos si estamos dentro del rango [1,umbral]
-        return ((absoluto >= 1) && (absoluto <= umbral))
-    }
 }
 
 
