@@ -24,15 +24,13 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:text="@string/msg_juego"
+        android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/juegoLogo"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/juegoLogo" />
 
 
     <TextView
@@ -55,7 +53,7 @@
         android:layout_marginTop="18dp"
         android:valueFrom="1"
         android:valueTo="100"
-        app:floatingLabel="false"
+        app:labelBehavior="gone"
         app:layout_constraintEnd_toStartOf="@+id/juegoBarraMax"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/juegoBarraMin"
