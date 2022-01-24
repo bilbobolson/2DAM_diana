@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">diana</string>
+    <string name="file_prefs">com.pmdm.diana.PREFERENCIAS_DIANA</string>
+
+    <string name="btn_disparar">¡Disparar!</string>
+    <string name="btn_reset">Comenzar juego</string>
+    <string name="btn_umbral">Establecer umbral</string>
+    <string name="btn_continuar">Continuar</string>
+    <string name="btn_terminar">Acabar el juego</string>
+
+    <string name="hint_umbral">Umbral</string>
+
+    <string name="msg_info">Juego desarrollado por Antonio José Sánchez</string>
+    <string name="msg_juego">Intenta disparar lo más cerca del valor %d</string>
+    <string name="msg_marcador">Puntos: %d</string>
+    <string name="msg_tiradas">Tiradas: %d</string>
+
+    <string name="msg_error_umbral">El valor del umbral no puede estar vacío ni ser negativo</string>
+    <string name="msg_info_tirada">Has dado en el número %d y has conseguido %d puntos.</string>
+    <string name="msg_info_acierto">¡Has dado en la diana! Has conseguido %d puntos.</string>
+    <string name="msg_instrucciones">Al finalizar la sesión de mentoring mediante una call, los founders estarán preparados para hacer el haunting de los developers. El business angel elaborará un informe sobre los objetivos y contenidos que no se han alcanzado y la propuesta de actividades de recuperación en cada caso. No queremos un medio ambiente, lo queremos completo. Nos manifestamos contra la destrucción de los bosques tropicales. El CMO se puede rellenar tras la sesión de evaluación, o bien, solicitar antes al equipo educativo. Las prescripciones, subordinaciones o privilegios que el patriarcado les haya adjudicado abusan de su autoridad.</string>
+</resources>
